@@ -1,7 +1,7 @@
-import React from 'react'
-import Layout from '@components/Layout'
-import SEO from '@components/seo'
-import HelloWorld from '@components/HelloWorld'
+import React from 'react';
+import Layout from '@components/Layout';
+import SEO from '@components/seo';
+import NameBar from '@components/NameBar';
 
 const IndexPage = ({ data }) => (
   <Layout showHome={false}>
@@ -9,8 +9,8 @@ const IndexPage = ({ data }) => (
       title="Sam Macaluso"
       keywords={[`developer`, `engineer`]}
     />
-    <HelloWorld />
+    < NameBar />
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

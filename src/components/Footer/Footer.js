@@ -7,7 +7,7 @@ const Footer = ({ siteMetadata }) => (
     <div>
       <span>© Copyright 2019 </span>
       <a
-        href={"#"}
+        href={"https://macalu.so"}
         className={styles.link}
         target="blank"
       >

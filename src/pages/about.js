@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Layout from '@components/Layout'
-import SEO from '@components/seo'
+import React from 'react';
+import { Link } from 'gatsby';
+import Layout from '@components/Layout';
+import SEO from '@components/seo';
 
 /* eslint-disable jsx-a11y/accessible-emoji */
 const AboutPage = () => (
@@ -17,7 +17,7 @@ const AboutPage = () => (
       .
     </p>
   </Layout>
-)
+);
 /* eslint-enable jsx-a11y/accessible-emoji */
 
-export default AboutPage
+export default AboutPage;

@@ -17,4 +17,4 @@ module.exports = {
   testURL: 'http://localhost',
   setupFiles: ['<rootDir>/config/test/loadershim.js'],
   setupTestFrameworkScriptFile: '<rootDir>/config/test/test-setup.js',
-}
+};

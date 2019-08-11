@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
-import styles from './Layout.module.scss'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
+import Header from '@components/Header';
+import Footer from '@components/Footer';
+import styles from './Layout.module.scss';
 
 const Layout = ({ children, showHome = true }) => (
   <StaticQuery
@@ -25,11 +25,11 @@ const Layout = ({ children, showHome = true }) => (
       </div>
     )}
   />
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   showHome: PropTypes.bool,
-}
+};
 
-export default Layout
+export default Layout;

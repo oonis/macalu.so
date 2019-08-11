@@ -3,7 +3,9 @@ module.exports = {
     title: `Sam Macaluso`,
     description: `Personal slice of the internet for Sam Macaluso`,
     author: `@oonis`,
-    fullName: `Sam Macaluso`
+    fullName: `Sam Macaluso`,
+    githubHandle: 'https://github.com/oonis',
+    linkedInHandle: 'https://www.linkedin.com/in/oonis'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
