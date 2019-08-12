@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/oonis
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://macalu.so
+  * I am oonis (https://keybase.io/oonis) on keybase.
+  * I have a public key ASC_LzJ0kuI79V2uwcaJ0NsUnfq1Dv9xjZFiM3NcmS3DzQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120cff1808b11a47d526774f2c892415b621baf672cebe1dd42a7136ea50dba1e080a",
+      "host": "keybase.io",
+      "kid": "0120bf2f327492e23bf55daec1c689d0db149dfab50eff718d916233735c992dc3cd0a",
+      "uid": "b25021e48732e31c190ff7ecde646a19",
+      "username": "oonis"
+    },
+    "merkle_root": {
+      "ctime": 1565641291,
+      "hash": "dfa8e5e30198a92f8d54011f91216d0e5d6e846549b26f977f47848dcc3949b5f2f8e0b881c45a142737373b622b329d01a88bfa61aadc929b9ccacbe8d4b46a",
+      "hash_meta": "13a007fa0638d125dc357c295915cccf7bb43bef73c599875554bbc136c76159",
+      "seqno": 5997639
+    },
+    "service": {
+      "entropy": "zhafIosU3ce+krEZUHXds1sf",
+      "hostname": "macalu.so",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.3.0"
+  },
+  "ctime": 1565641302,
+  "expire_in": 504576000,
+  "prev": "abeecb70f71457ba4c5aadb5e34bc8844c7de74d5aba3ccdd6e88743e59754d4",
+  "seqno": 105,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgvy8ydJLiO/VdrsHGidDbFJ36tQ7/cY2RYjNzXJktw80Kp3BheWxvYWTESpcCacQgq+7LcPcUV7pMWq2140vIhEx9501aujzN1uiHQ+WXVNTEID8N67qDYdtqKtbMq+4Ae+7By0qBGB3bihS2uLfAMSvTAgHCo3NpZ8RAaBSLl88v82p9jMz9BMQ7xA8dUSg1iHPHcynjvC9fT9Sa5XksyHvtlr3pOMBKaO9zYEW3aub8nPN9xWnW35ffC6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEINS0FsVRr3c5x0gSErK3Bq37NEfhjsZ27lfG/jJQNJFpo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/oonis
+
+==================================================================
