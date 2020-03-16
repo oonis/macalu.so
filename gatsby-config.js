@@ -5,7 +5,7 @@ module.exports = {
     author: `@oonis`,
     fullName: `Sam Macaluso`,
     githubHandle: 'https://github.com/oonis',
-    linkedInHandle: 'https://www.linkedin.com/in/oonis'
+    linkedInHandle: 'https://www.linkedin.com/in/smaca'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
