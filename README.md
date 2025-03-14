@@ -1,5 +1,7 @@
 # [macalu.so](https://macalu.so)
 
+My personal slice of the internet.
+
 ## Setup
 
 ```bash
