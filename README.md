@@ -1,6 +1,4 @@
-# [macalu.so](https://macalu.so)
-
-🏠 My personal slice of the internet.
+# [🏠 My personal slice of the internet](https://macalu.so)
 
 ## Setup
 
