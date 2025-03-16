@@ -15,11 +15,11 @@ jobs:
       steps:
         - name: Auto approve
           uses: hmarr/auto-approve-action@v4.0.0
-          if: github.actor == 'dependabot[bot]' || github.actor == 'oonis'
+          if: github.actor == 'dependabot[bot]'
           with:
             github-token: ${{ secrets.GITHUB_TOKEN }}
         - name: Enable auto-merge
-          if: github.actor == 'dependabot[bot]' || github.actor == 'oonis'
+          if: github.actor == 'dependabot[bot]'
           # https://cli.github.com/manual/gh_pr_merge
           run: gh pr merge --auto --squash "$PR_URL"
           env:
