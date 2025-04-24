@@ -10,14 +10,14 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "macalu.so | Personal website, docs",
+    default: "macalu.so | Personal website, wiki",
     template: "%s | macalu.so",
   },
-  description: "Personal website, docs",
+  description: "Personal website, wiki",
   metadataBase: new URL("https://macalu.so"),
   openGraph: {
     title: "macalu.so",
-    description: "Personal website, docs",
+    description: "Personal website, wiki",
     url: "https://macalu.so",
     siteName: "macalu.so",
     locale: "en_US",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "sam",
     "sam macaluso",
     "personal website",
-    "docs",
+    "wiki",
   ],
 }
 
