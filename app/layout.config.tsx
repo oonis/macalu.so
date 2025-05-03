@@ -16,5 +16,9 @@ export const baseOptions: BaseLayoutProps = {
       text: "GitHub",
       url: "https://github.com/oonis",
     },
+    {
+      text: "CV",
+      url: "https://macalu.so/cv.pdf",
+    },
   ],
 }
