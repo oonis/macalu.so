@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
-    "fumadocs-core": "^15.2.12",
+    "fumadocs-core": "^15.2.15",
     "fumadocs-mdx": "^11.6.2",
     "fumadocs-ui": "^15.2.12",
     "next": "^15.3.1",
