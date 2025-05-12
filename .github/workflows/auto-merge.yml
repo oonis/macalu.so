@@ -20,7 +20,7 @@ jobs:
             github-token: ${{ secrets.GITHUB_TOKEN }}
         - name: Add dependencies label
           if: github.actor == 'dependabot[bot]'
-          run: gh pr edit ${{github.event.pull_request.html_url}} --add-label "dependencies"
+          run: gh pr edit ${{github.event.pull_request.html_url}} --add-label "auto-approve"
           env:
             GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         - name: Enable auto-merge
