@@ -9,24 +9,28 @@ permissions:
     contents: write
 
 jobs:
-    autoapprove:
-      name: Auto Approve a PR by dependabot
-      runs-on: ubuntu-latest
-      steps:
-        - name: Auto approve
-          uses: hmarr/auto-approve-action@v4.0.0
-          if: github.actor == 'dependabot[bot]'
-          with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-        - name: Add dependencies label
-          if: github.actor == 'dependabot[bot]'
-          run: gh pr edit ${{github.event.pull_request.html_url}} --add-label "auto-approve"
-          env:
-            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        - name: Enable auto-merge
-          if: github.actor == 'dependabot[bot]'
-          # https://cli.github.com/manual/gh_pr_merge
-          run: gh pr merge --auto --squash "$PR_URL"
-          env:
-            PR_URL: ${{github.event.pull_request.html_url}}
-            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+  autoapprove:
+    name: Auto Approve a PR by dependabot
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Auto approve
+        uses: hmarr/auto-approve-action@v4.0.0
+        if: github.actor == 'dependabot[bot]'
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Add dependencies label
+        if: github.actor == 'dependabot[bot]'
+        run: gh pr edit ${{github.event.pull_request.html_url}} --add-label "auto-approve"
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Enable auto-merge
+        if: github.actor == 'dependabot[bot]'
+        run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
