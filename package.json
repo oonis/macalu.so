@@ -14,7 +14,7 @@
     "@vercel/analytics": "^1.5.0",
     "fumadocs-core": "^15.8.3",
     "fumadocs-mdx": "^12.0.1",
-    "fumadocs-ui": "^15.8.2",
+    "fumadocs-ui": "^15.8.3",
     "next": "^15.5.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
