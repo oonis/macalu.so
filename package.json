@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@fumadocs/cli": "^1.0.2",
-    "@tailwindcss/postcss": "^4.1.15",
+    "@tailwindcss/postcss": "^4.1.16",
     "@types/mdx": "^2.0.13",
     "@types/node": "^24.9.1",
     "@types/react": "^19.2.0",
