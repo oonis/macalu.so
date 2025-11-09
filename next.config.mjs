@@ -12,6 +12,12 @@ const config = {
         hostname: "**",
       },
     ],
+    // Add image optimization settings
+    formats: ["image/avif", "image/webp"],
+  },
+  // Enable experimental optimizations
+  experimental: {
+    optimizePackageImports: ["fumadocs-ui", "fumadocs-core"],
   },
 }
 
