@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   subsets: ["latin"],
+  display: "swap", // Add display swap for better perceived performance
 });
 
 export const metadata: Metadata = {

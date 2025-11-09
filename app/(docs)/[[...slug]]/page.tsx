@@ -9,6 +9,9 @@ import { notFound } from "next/navigation"
 import defaultMdxComponents from "fumadocs-ui/mdx"
 import type { Metadata } from "next"
 
+// Move components object to module level to avoid recreating on every render
+const mdxComponents = { ...defaultMdxComponents }
+
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>
 }) {
@@ -23,7 +26,7 @@ export default async function Page(props: {
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>
-        <MDX components={{ ...defaultMdxComponents }} />
+        <MDX components={mdxComponents} />
       </DocsBody>
     </DocsPage>
   )
@@ -58,3 +61,7 @@ export async function generateMetadata(props: {
     },
   }
 }
+
+// Enable static generation with ISR for better performance
+// Pages will be statically generated and revalidated every 3600 seconds (1 hour)
+export const revalidate = 3600
