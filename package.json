@@ -13,7 +13,7 @@
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
     "fumadocs-core": "^16.0.10",
-    "fumadocs-mdx": "^13.0.7",
+    "fumadocs-mdx": "^14.0.2",
     "fumadocs-ui": "^16.0.13",
     "next": "^16.0.3",
     "react": "^19.2.0",
