@@ -23,7 +23,7 @@
     "@fumadocs/cli": "^1.0.3",
     "@tailwindcss/postcss": "^4.1.17",
     "@types/mdx": "^2.0.13",
-    "@types/node": "^24.10.0",
+    "@types/node": "^24.10.1",
     "@types/react": "^19.2.4",
     "@types/react-dom": "^19.2.3",
     "@typescript-eslint/eslint-plugin": "^8.47.0",
