@@ -1,15 +1,8 @@
 import "./global.css";
 import { RootProvider } from "fumadocs-ui/provider/next";
-import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
 import { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
-
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap", // Add display swap for better perceived performance
-});
 
 export const metadata: Metadata = {
   title: {
@@ -40,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={inter.className} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
         <RootProvider>{children}</RootProvider>
         <Analytics />
