@@ -3,3 +3,10 @@
 @import "fumadocs-ui/css/preset.css";
 
 @source '../node_modules/fumadocs-ui/dist/**/*.js';
+
+/* System font stack similar to Inter */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
