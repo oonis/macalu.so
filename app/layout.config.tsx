@@ -1,24 +1,23 @@
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 
-/**
- * Shared layout configurations
- *
- * you can configure layouts individually from:
- * Home Layout: app/(home)/layout.tsx
- * Docs Layout: app/docs/layout.tsx
- */
 export const baseOptions: BaseLayoutProps = {
   nav: {
-    title: "macalu.so",
+    title: "sam macaluso",
   },
   links: [
     {
+      text: "Wiki",
+      url: "/",
+    },
+    {
       text: "GitHub",
       url: "https://github.com/oonis",
+      external: true,
     },
     {
       text: "CV",
       url: "https://oonis.github.io/cv/",
+      external: true,
     },
   ],
 };

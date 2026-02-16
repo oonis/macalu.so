@@ -3,17 +3,20 @@ import { RootProvider } from "fumadocs-ui/provider/next";
 import type { ReactNode } from "react";
 import { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
+import { Footer } from "./components/footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "macalu.so | Personal website, wiki",
-    template: "%s | macalu.so",
+    default: "sam macaluso — personal wiki",
+    template: "%s | sam macaluso",
   },
-  description: "Personal website, wiki",
+  description:
+    "Personal wiki by Sam Macaluso. Curated product recommendations, notes, and things I've learned.",
   metadataBase: new URL("https://macalu.so"),
   openGraph: {
-    title: "macalu.so",
-    description: "Personal website, wiki",
+    title: "sam macaluso",
+    description:
+      "Personal wiki — curated product picks, notes, and things I've learned.",
     url: "https://macalu.so",
     siteName: "macalu.so",
     locale: "en_US",
@@ -24,10 +27,11 @@ export const metadata: Metadata = {
     follow: true,
   },
   keywords: [
-    "sam",
     "sam macaluso",
-    "personal website",
-    "wiki",
+    "personal wiki",
+    "best in slot",
+    "product recommendations",
+    "software developer",
   ],
 };
 
@@ -35,7 +39,10 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
-        <RootProvider>{children}</RootProvider>
+        <RootProvider>
+          <div className="flex-1">{children}</div>
+          <Footer />
+        </RootProvider>
         <Analytics />
       </body>
     </html>
