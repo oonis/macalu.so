@@ -44,3 +44,15 @@ a {
 .site-footer a:hover {
   text-decoration: underline;
 }
+
+/* Homepage cream theme — scoped to fumadocs' HomeLayout root, leaves docs pages on the default neutral theme */
+#nd-home-layout {
+  --color-fd-background: #faf6f0;
+  --color-fd-foreground: #2b2622;
+  --color-fd-muted-foreground: #8a7a68;
+  --color-fd-border: #e8ddd0;
+  --color-fd-card: #ffffff;
+  --color-fd-card-foreground: #2b2622;
+  --color-fd-accent: #c1543c;
+  --color-fd-accent-foreground: #faf6f0;
+}
