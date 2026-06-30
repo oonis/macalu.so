@@ -57,11 +57,32 @@ headings (system serif stack), terracotta accent (`#c1543c`):
    `baseOptions` from `layout.config.tsx` for link targets).
 2. **Bio block** — circular avatar (`public/avatar.jpg`, already cropped to the
    dog's face) + "Hey, I'm Sam." + one-line bio.
-3. **Currently recommending** — see Data below. Omitted entirely if no dated
-   page exists yet.
-4. **Section links** — two cards, "Apps →" and "Best in Slot →", linking to
-   `/apps` and `/best-in-slot`.
+3. **Currently recommending** — rendered as a catalog index card (see Signature
+   detail below). Omitted entirely if no dated page exists yet.
+4. **Section links** — two cards, "Apps →" and "Best in Slot →", each carrying
+   an entry-count label (see Signature detail), linking to `/apps` and
+   `/best-in-slot`.
 5. Existing `<Footer />` stays as-is underneath.
+
+### Signature detail: catalog index card
+
+Plain Warm Paper (cream/serif/terracotta) is, on its own, one of the most
+common AI-default looks right now — fine as a palette, not distinctive on its
+own. One deliberate motif grounds it in the actual subject (Sam's habit of
+over-cataloging things he owns/uses), kept restrained and limited to two
+spots:
+
+- **"Currently recommending" strip** becomes an index-card: thin bordered box,
+  a small monospace catalog tag top-left (`NO. 0XX`, zero-padded to 3 digits)
+  and "CURRENTLY" label top-right, then the page's `title` + `description`
+  below as the card body. `XX` = total cataloged entries (`apps` pages +
+  `best-in-slot` pages, excluding each section's own `index` page).
+- **Section link cards** gain a small count caption under the link text:
+  "Apps — N entries", "Best in Slot — N categories" (N computed the same way,
+  scoped to that section; pluralize "entry/entries" on N === 1).
+
+No other decoration — bio block, nav, and footer stay exactly as already
+mocked up (cream bg `#faf6f0`, serif headings, terracotta `#c1543c` accent).
 
 ### "Currently recommending" data
 
@@ -71,8 +92,10 @@ schema passed to `defineDocs` in `source.config.ts`). Pages opt in by adding
 feature (no error).
 
 Homepage logic: call `source.getPages()`, filter to pages with a `date`, sort
-descending, take the first. Render its `title` + `description` + link. If the
-filtered list is empty, render nothing — no placeholder, no error.
+descending (string comparison is safe for `YYYY-MM-DD`), take the first.
+Render its `title` + `description` + link, plus the catalog tag described
+above. If the filtered list is empty, render nothing — no placeholder, no
+error.
 
 **Before first deploy**, at least one existing page needs a `date:` added
 manually (e.g. `apps/flighty.mdx`), otherwise the slot stays empty on launch.
@@ -80,8 +103,13 @@ manually (e.g. `apps/flighty.mdx`), otherwise the slot stays empty on launch.
 ### Nav fix
 
 `content/docs/meta.json` currently lists `"pages": ["index", "best-in-slot"]`,
-omitting `"apps"`. Update to `["best-in-slot", "apps"]` (dropping `index` per
-the routing change above) so the Apps section shows in the wiki sidebar.
+omitting `"apps"` — and `content/docs/apps/` has no `meta.json` of its own at
+all (unlike `best-in-slot/`, which has one). Fix:
+- Add `content/docs/apps/meta.json` with `{"title": "Apps", "pages": ["index", "flighty"]}`,
+  matching the pattern `best-in-slot/meta.json` already uses.
+- Update root `content/docs/meta.json` to `{"pages": ["best-in-slot", "apps"]}`
+  (dropping `index` per the routing change above) so Apps shows in the wiki
+  sidebar.
 
 ### Avatar asset
 
