@@ -336,7 +336,7 @@ git rm content/docs/index.mdx
 - [ ] **Step 6: Verify the homepage and docs pages together**
 
 Run: `npm run dev`, visit `http://localhost:3000/`.
-Expected: cream-background homepage renders — avatar circle, "Hey, I'm Sam.", a "Currently recommending" card showing "No. 001 — Currently recommending — Flighty — Flight tracking app" (linking to `/apps/flighty`), two link cards "Apps → / 1 entry" and "Best in Slot → / 4 categories", no sidebar, no docs chrome.
+Expected: cream-background homepage renders — avatar circle, "Hey, I'm Sam.", a "Currently recommending" card showing "No. 005 — Currently recommending — Flighty — Flight tracking app" (linking to `/apps/flighty`; `005` = 1 apps entry + 4 best-in-slot categories), two link cards "Apps → / 1 entry" and "Best in Slot → / 4 categories", no sidebar, no docs chrome.
 Visit `http://localhost:3000/best-in-slot` and `http://localhost:3000/apps/flighty`.
 Expected: both render exactly as before (default neutral fumadocs theme, sidebar present, unaffected by the homepage's cream CSS scope). Stop the dev server.
 
